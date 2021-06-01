@@ -35,7 +35,7 @@ const NavigationAuth = () => (
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={useStyles.title}>
-            Admin Dashboard
+            Hello Admin
           </Typography>
           <Button color="inherit"><Link to={ROUTES.LANDING}>Landing</Link></Button>
           <Button color="inherit"><Link to={ROUTES.HOME}>Home</Link></Button>
@@ -69,7 +69,7 @@ const NavigationNonAuth = () => (
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={useStyles.title}>
-            Admin Dashboard
+            Hello Admin
           </Typography>
           <Button color="inherit"><Link to={ROUTES.LANDING}>Landing</Link></Button>
           <Button color="inherit"> <Link to={ROUTES.SIGN_IN}>Sign In</Link></Button>
