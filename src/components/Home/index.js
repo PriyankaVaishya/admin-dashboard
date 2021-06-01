@@ -2,18 +2,48 @@ import React, { Component } from 'react';
 import { withFirebase } from '../Firebase';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import IconButton from '@material-ui/core/IconButton';
-import DoneAllIcon from '@material-ui/icons/DoneAll';
-import Typography from '@material-ui/core/Typography';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import Demo from './demo';
+
+
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: 'center',
+    color: theme.palette.text.secondary,
+  },
+  modal: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+},
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+  selectEmpty: {
+    marginTop: theme.spacing(2),
+  },
+}));
 
 
 class HomePage extends Component {
@@ -23,6 +53,9 @@ class HomePage extends Component {
     this.state = {
       loading: false,
       users: [],
+      dept: null,
+      checkedArea: false,
+      checkedViolation: false,
     };
   }
 
@@ -72,11 +105,11 @@ class HomePage extends Component {
 
     console.log(postID);
 
-    if(choice == 4) {
-          console.log(userID);
-    this.setState({ users: this.state.users.filter(function(user) { 
-      return user.id !== postID })});
-    }
+    // if(choice == 4) {
+    //       console.log(userID);
+    // this.setState({ users: this.state.users.filter(function(user) { 
+    //   return user.id !== postID })});
+    // }
 
       if(choice == 1) {
         this.props.firebase.db.collection('posts').doc(userID)
@@ -124,77 +157,540 @@ class HomePage extends Component {
                 });        
   }
 
-  // handleChange = event => {
-  //   //setAge(event.target.value);
-  //   console.log(event.target.value);
-  // };
+
+  searchByDept(choice) {
+    var dept;
+    switch(choice) {
+      case 1: dept = "Electrical"; break;
+      case 2: dept = "Encroachment"; break;
+      case 3: dept = "Stray Animals"; break;
+      case 4: dept = "Garden"; break;
+      case 5: dept = "Road"; break;
+      case 6: dept = "Building Permission"; break;
+      case 7: dept = "Water Supply"; break;
+      case 8: dept = "Drainage"; break;
+      case 9: dept = "Traffic"; break;
+      case 10: dept = "Property Tax"; break;
+      case 11: dept = "Garbage"; break;
+      case 12: dept = "Health"; break;
+    }
+
+    const posts = [];
+
+    var postCollecton = this.props.firebase.db.collectionGroup("userPosts");
+    postCollecton.where("type", "array-contains", dept).orderBy("creation", "desc").get()
+    .then(response => {
+      response.forEach(document => {
+        const fetchedPost = {
+          id: document.id,
+          ...document.data()
+        };
+        posts.push(fetchedPost);
+        this.setState({
+          users: posts,
+          loading: false,
+        });
+      })
+    })
+  }
+
+//   handleCheckChange(event) {
+//     const posts = [];
+//     if(this.state.dept) {
+//       var postCollecton = this.props.firebase.db.collectionGroup("userPosts");
+
+//       if(event.target.name == "area") {
+//         if(event.target.checked == true) {
+//           if(this.checkedViolation) {
+            
+//             postCollecton.where("type", "array-contains", this.dept).
+//             where("isCovidArea", "==", true).
+//             where("isCovidViolation", "==", true)
+//             .get()
+//         .then(response => {
+//       response.forEach(document => {
+//         const fetchedPost = {
+//           id: document.id,
+//           ...document.data()
+//         };
+//         posts.push(fetchedPost);
+//         this.setState({
+//           users: posts,
+//           loading: false,
+//           checkedArea: true
+//         });
+//       })
+//     })}
+
+//     else {
+//       postCollecton.where("type", "array-contains", this.dept).
+//             where("isCovidArea", "==", true)
+//             .get()
+//         .then(response => {
+//       response.forEach(document => {
+//         const fetchedPost = {
+//           id: document.id,
+//           ...document.data()
+//         };
+//         posts.push(fetchedPost);
+//         this.setState({
+//           users: posts,
+//           loading: false,
+//         });
+//       })
+//     })
+//     }
+//     }
+//     else {
+
+//       if(this.checkedViolation) {
+              
+//         postCollecton.where("type", "array-contains", this.dept).
+//         where("isCovidViolation", "==", true)
+//         .get()
+//     .then(response => {
+//   response.forEach(document => {
+//     const fetchedPost = {
+//       id: document.id,
+//       ...document.data()
+//     };
+//     posts.push(fetchedPost);
+//     this.setState({
+//       users: posts,
+//       loading: false,
+//     });
+//   })
+//   })}
+
+//   else {
+//   postCollecton.where("type", "array-contains", this.dept)
+//         .get()
+//     .then(response => {
+//   response.forEach(document => {
+//     const fetchedPost = {
+//       id: document.id,
+//       ...document.data()
+//     };
+//     posts.push(fetchedPost);
+//     this.setState({
+//       users: posts,
+//       loading: false,
+//     });
+//   })
+//   })
+//   }
+    
+//   }
+// }
+
+//         if(event.target.name == "violation") {
+//           if(event.target.checked == true) {
+//             if(this.checkedArea) {
+              
+//               postCollecton.where("type", "array-contains", this.dept).
+//               where("isCovidArea", "==", true).
+//               where("isCovidViolation", "==", true)
+//               .get()
+//           .then(response => {
+//         response.forEach(document => {
+//           const fetchedPost = {
+//             id: document.id,
+//             ...document.data()
+//           };
+//           posts.push(fetchedPost);
+//           this.setState({
+//             users: posts,
+//             loading: false,
+//           });
+//         })
+//         })}
+
+//         else {
+//         postCollecton.where("type", "array-contains", this.dept).
+//               where("isCovidViolation", "==", true)
+//               .get()
+//           .then(response => {
+//         response.forEach(document => {
+//           const fetchedPost = {
+//             id: document.id,
+//             ...document.data()
+//           };
+//           posts.push(fetchedPost);
+//           this.setState({
+//             users: posts,
+//             loading: false,
+//           });
+//         })
+//         })
+//         }
+//         }
+//         else {
+
+//         if(this.checkedArea) {
+                
+//           postCollecton.where("type", "array-contains", this.dept).
+//           where("isCovidArea", "==", true)
+//           .get()
+//         .then(response => {
+//         response.forEach(document => {
+//         const fetchedPost = {
+//         id: document.id,
+//         ...document.data()
+//         };
+//         posts.push(fetchedPost);
+//         this.setState({
+//         users: posts,
+//         loading: false,
+//         });
+//         })
+//         })}
+
+//         else {
+//         postCollecton.where("type", "array-contains", this.dept)
+//           .get()
+//         .then(response => {
+//         response.forEach(document => {
+//         const fetchedPost = {
+//         id: document.id,
+//         ...document.data()
+//         };
+//         posts.push(fetchedPost);
+//         this.setState({
+//         users: posts,
+//         loading: false,
+//         });
+//         })
+//         })
+//         }
+
+//         }
+//         }
+//     }
+
+//     else {
+//       if(event.target.name == "area") {
+//         if(event.target.checked == true) {
+//           if(this.checkedViolation) {
+            
+//             postCollecton.where("isCovidArea", "==", true).
+//             where("isCovidViolation", "==", true)
+//             .get()
+//         .then(response => {
+//       response.forEach(document => {
+//         const fetchedPost = {
+//           id: document.id,
+//           ...document.data()
+//         };
+//         posts.push(fetchedPost);
+//         this.setState({
+//           users: posts,
+//           loading: false,
+//         });
+//       })
+//     })}
+
+//     else {
+//       postCollecton.where("isCovidArea", "==", true)
+//             .get()
+//         .then(response => {
+//       response.forEach(document => {
+//         const fetchedPost = {
+//           id: document.id,
+//           ...document.data()
+//         };
+//         posts.push(fetchedPost);
+//         this.setState({
+//           users: posts,
+//           loading: false,
+//         });
+//       })
+//     })
+//     }
+//     }
+//     else {
+
+//       if(this.checkedViolation) {
+              
+//         postCollecton.where("isCovidViolation", "==", true)
+//         .get()
+//     .then(response => {
+//   response.forEach(document => {
+//     const fetchedPost = {
+//       id: document.id,
+//       ...document.data()
+//     };
+//     posts.push(fetchedPost);
+//     this.setState({
+//       users: posts,
+//       loading: false,
+//     });
+//   })
+//   })}
+
+//   else {
+//   postCollecton.get()
+//     .then(response => {
+//   response.forEach(document => {
+//     const fetchedPost = {
+//       id: document.id,
+//       ...document.data()
+//     };
+//     posts.push(fetchedPost);
+//     this.setState({
+//       users: posts,
+//       loading: false,
+//     });
+//   })
+//   })
+//   }
+    
+//   }
+// }
+
+//         if(event.target.name == "violation") {
+//           if(event.target.checked == true) {
+//             if(this.checkedArea) {
+              
+//               postCollecton.where("type", "array-contains", this.dept).
+//               where("isCovidArea", "==", true).
+//               where("isCovidViolation", "==", true)
+//               .get()
+//           .then(response => {
+//         response.forEach(document => {
+//           const fetchedPost = {
+//             id: document.id,
+//             ...document.data()
+//           };
+//           posts.push(fetchedPost);
+//           this.setState({
+//             users: posts,
+//             loading: false,
+//           });
+//         })
+//         })}
+
+//         else {
+//         postCollecton.where("type", "array-contains", this.dept).
+//               where("isCovidViolation", "==", true)
+//               .get()
+//           .then(response => {
+//         response.forEach(document => {
+//           const fetchedPost = {
+//             id: document.id,
+//             ...document.data()
+//           };
+//           posts.push(fetchedPost);
+//           this.setState({
+//             users: posts,
+//             loading: false,
+//           });
+//         })
+//         })
+//         }
+//         }
+//         else {
+
+//         if(this.checkedArea) {
+                
+//           postCollecton.where("type", "array-contains", this.dept).
+//           where("isCovidArea", "==", true)
+//           .get()
+//         .then(response => {
+//         response.forEach(document => {
+//         const fetchedPost = {
+//         id: document.id,
+//         ...document.data()
+//         };
+//         posts.push(fetchedPost);
+//         this.setState({
+//         users: posts,
+//         loading: false,
+//         });
+//         })
+//         })}
+
+//         else {
+//         postCollecton.where("type", "array-contains", this.dept)
+//           .get()
+//         .then(response => {
+//         response.forEach(document => {
+//         const fetchedPost = {
+//         id: document.id,
+//         ...document.data()
+//         };
+//         posts.push(fetchedPost);
+//         this.setState({
+//         users: posts,
+//         loading: false,
+//         });
+//         })
+//         })
+//         }
+
+//         }
+//         }
+//     }
+//   }
+
+  returnColor(dept) {
+    if(dept === "Electrical")
+      return "aliceblue";
+
+    if(dept === "Encroachment")
+      return "antiquewhite";
+
+    if(dept === "Garden")
+    return "#d1ffbd";
+
+    if(dept === "Road")
+    return "#d2cbaf";
+
+    if(dept === "Stray Animals")
+    return "#e0dddd";
+
+    if(dept === "Building Permission")
+    return "#d9e3e5";
+
+    if(dept === "Water Supply")
+    return "#dcdbca";
+
+    if(dept === "Drainage")
+    return "#beb4ab";
+
+    if(dept === "Traffic")
+    return "#e9d3ba";
+
+    if(dept === "Property Tax")
+    return "#f1e4dc";
+
+    if(dept === "Garbage")
+    return 
+
+    if(dept === "Health")
+    return "#e6f9f1";
+
+    else 
+    return "white";
+  
+  }
+
 
   render() {
-    const { users, loading } = this.state;
+    const { users, loading, showDetails } = this.state;
  
     return (
       <div>
-        <Typography component="h2" variant="h6" color="primary" gutterBottom>
-            Complaints
+        <div className="titleCenter">
+          <p>
+        <Typography component="h4" variant="h4" color="primary" gutterBottom>
+            Current Complaints
         </Typography>
- 
-        {loading && <div>Loading ...</div>}
- 
-        {/* <PostList users={users} /> */}
+        </p>
+        </div>
 
+        {loading && <div className="loading">
+          <CircularProgress />
+          </div>}
+
+        {!loading && 
         <div>
-          <Table size="small">
+        <div>
+          <p>
+        <Grid container spacing={3}>
+                <Grid item xs={3}>
+                </Grid>
+                <Grid item xs={3}>
+                  Search by Department: 
+        <div className="tab">
+        <FormControl className={useStyles.formControl}>
+        <Select
+            labelId="demo-simple-select-label"
+            id="demo-simple-select"
+            displayEmpty
+            className={useStyles.selectEmpty}
+            onChange={(event) => { this.searchByDept(event.target.value) }}
+          >
+            <MenuItem value={1}>Electrical</MenuItem>
+            <MenuItem value={2}>Encroachment</MenuItem>
+            <MenuItem value={3}>Stray Animals</MenuItem>
+            <MenuItem value={4}>Garden</MenuItem>
+            <MenuItem value={5}>Road</MenuItem>
+            <MenuItem value={6}>Building Permission</MenuItem>
+            <MenuItem value={7}>Water Supply</MenuItem>
+            <MenuItem value={8}>Drainage</MenuItem>
+            <MenuItem value={9}>Traffic</MenuItem>
+            <MenuItem value={10}>Property Tax</MenuItem>
+            <MenuItem value={11}>Garbage</MenuItem>
+            <MenuItem value={12}>Health</MenuItem>
+          </Select>
+        </FormControl>
+        </div>
+        </Grid>
+        {/* <Grid item xs={3}>
+        <FormGroup row>
+          <FormControlLabel
+            control={<Checkbox 
+              checked={this.state.checkedArea} onChange={this.handleCheckChange} name="area" color="primary"/>}
+            label="Covid Area"
+          />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={this.state.checkedViolation}
+                onChange={this.handleChange}
+                name="violation"
+                color="primary"
+              />
+            }
+            label="Covid Violation"
+          />
+          </FormGroup>
+        </Grid> */}
+        </Grid>
+        </p>
+        </div>
+
+        <div className={useStyles.root}> 
+        <Grid container spacing={2}>
+        <Grid item xs>
+        </Grid>
+        <Grid item xs={6}>
+          <Paper className={useStyles.paper}>
+          <Table stickyHeader aria-label="sticky table" size="small">
             <TableHead>
               <TableRow>
-              <TableCell>Department</TableCell>
-                <TableCell>Title</TableCell>
-                <TableCell>Location</TableCell>
-                <TableCell>Body</TableCell>
-                <TableCell>Image Link</TableCell>
-                <TableCell>Status</TableCell>
+              <TableCell><div className="tableHead">Dept</div></TableCell>
+              <TableCell><div className="tableHead">Location</div></TableCell>
+              <TableCell><div className="tableHead">Title</div></TableCell>
+              <TableCell><div className="tableHead">Date</div></TableCell>
+              <TableCell><div className="tableHead"></div></TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
               {users.map((row) => (
                 <TableRow key={row.id}>
-                  <TableCell>{row.type[0]}</TableCell>
-                  <TableCell>{row.title}</TableCell>
+                  <TableCell><div style={{backgroundColor: this.returnColor(row.type[0])}}>.</div></TableCell>
                   <TableCell>{row.location}</TableCell>
-                  <TableCell>{row.body}</TableCell>
-                  <TableCell>{row.image && <a href={row.image}>Image</a>}</TableCell>
+                  <TableCell>{row.title}</TableCell>
+                  <TableCell>{row.creation.toDate().toString().substring(0, row.creation.toDate().toString().lastIndexOf('G'))}</TableCell>
                   <TableCell>
-
-                  <FormControl className={useStyles.formControl}>
-                  <Select
-                      labelId="demo-simple-select-label"
-                      id="demo-simple-select"
-                      displayEmpty
-                      //value={row.status}
-                      className={useStyles.selectEmpty}
-                      onChange={(event) => { this.updateTemp(row.user, row.id, event.target.value) }}
-                    >
-                      <MenuItem value={1}>Processing</MenuItem>
-                      <MenuItem value={2}>Assigned to Operator</MenuItem>
-                      <MenuItem value={3}>Work in Progress</MenuItem>
-                      <MenuItem value={4}>Completed</MenuItem>
-                    </Select>
-                    <FormHelperText>{row.status}</FormHelperText>
-                  </FormControl>
-                    
-                    {/* {row.status}
-                  <IconButton aria-label="done" 
-                  className={useStyles.root}
-                  onClick={() => { this.updateTemp(row.user, row.id) }}>
-                    <DoneAllIcon />
-                  </IconButton> */}
-
+                      <Demo row={row} firebase={this.props.firebase.db} />
                   </TableCell>
                 </TableRow>
               ))}
             </TableBody>
           </Table>
-          </div>
-              </div>
+          </Paper>
+        </Grid>
+        <Grid item xs>
+           USE COLOR LEGEND 
+        </Grid>
+      </Grid>
+        </div>
+        </div>
+  }  
+  </div> 
+  
     );
   }
 }
@@ -203,60 +699,5 @@ function preventDefault(event) {
   event.preventDefault();
 }
 
-const useStyles = makeStyles((theme) => ({
-  seeMore: {
-    marginTop: theme.spacing(3),
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
-  selectEmpty: {
-    marginTop: theme.spacing(2),
-  },
-}));
-
-// const PostList = ({ users }) => (
-//   <div>
-//   <h1>Title</h1>
-//   <Table size="small">
-//     <TableHead>
-//       <TableRow>
-//         <TableCell>Title</TableCell>
-//         <TableCell>Location</TableCell>
-//         <TableCell>Body</TableCell>
-//         <TableCell>Image Link</TableCell>
-//         <TableCell>Status</TableCell>
-//       </TableRow>
-//     </TableHead>
-//     <TableBody>
-//       {users.map((row) => (
-//         <TableRow key={row.id}>
-//           <TableCell>{row.title}</TableCell>
-//           <TableCell>{row.location}</TableCell>
-//           <TableCell>{row.body}</TableCell>
-//           <TableCell>{row.image}</TableCell>
-//           <TableCell>{row.status}
-//               <Button
-//             variant="contained"
-//             color="primary"
-//             className={useStyles.button}
-//             onClick={() => { alert('clicked') }}
-//             endIcon={<Icon>send</Icon>}
-//           >
-//             Update
-//           </Button>
-//           </TableCell>
-//         </TableRow>
-//       ))}
-//     </TableBody>
-//   </Table>
-//   {/* <div className={useStyles.seeMore}>
-//     <Link color="primary" href="#" onClick={preventDefault}>
-//       See more orders
-//     </Link>
-//   </div> */}
-//   </div>
-// );
 
 export default withFirebase(HomePage);
