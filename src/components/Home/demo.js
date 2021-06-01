@@ -102,17 +102,17 @@ export default function SimpleModal(props) {
 
     if(choice == 4) {
         alert("This will shift the complaint to closed complaints.");
-        // firebase.collection('posts').doc(userID)
+        // props.firebase.collection('posts').doc(userID)
         //         .collection('userPosts').doc(postID).get().then(document => {
         //           const fetchedPost = {
         //             id: document.id,
         //             ...document.data()
         //           };
 
-        //         this.props.firebase.db.collection('posts').doc(userID)
+        //         props.firebase.collection('posts').doc(userID)
         //        .collection('closedComplaints').doc(postID).set(fetchedPost);
 
-        //        this.props.firebase.db.collection('posts').doc(userID)
+        //        props.firebase.collection('posts').doc(userID)
         //        .collection('userPosts').doc(postID).delete(
         //          console.log("Deleted")
         //        ).catch(error => 

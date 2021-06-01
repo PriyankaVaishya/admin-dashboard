@@ -49,4 +49,16 @@ code {
   .tab {
     display: inline-block;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
+
+.tabClosedComplaints {
+  display: inline-block;
+  margin-left: 106px;
+  margin-bottom: 31px;
+}
+
+  .searchClosedComplaints {
+    display: inline-block;
+    margin-left: 135px;
+  }

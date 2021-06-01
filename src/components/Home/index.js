@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
@@ -77,7 +78,7 @@ class HomePage extends Component {
 
             firstUserList.forEach(user => {
               this.props.firebase.db.collection('posts').doc(user).
-              collection('userPosts').orderBy("creation", "desc").get()
+              collection('userPosts').get()
                 .then(response => {
                   response.forEach(document => {
                     const fetchedPost = {
@@ -86,12 +87,17 @@ class HomePage extends Component {
                       ...document.data()
                     };
                     posts.push(fetchedPost);
-                    this.setState({
-                      users: posts,
-                      loading: false,
-                    });
+                    this.props.firebase.db.collection('posts').doc(user)
+                      .collection('userPosts').doc(fetchedPost.id).set({
+                    user: user
+                }, { merge: true });
+                    // this.setState({
+                    //   users: posts,
+                    //   loading: false,
+                    // });
                   });
-                  console.log(posts);
+                  this.searchByDept(13);
+                  //console.log(posts);
                 }).catch(error => {
                   console.log(error);
                 });
@@ -173,12 +179,14 @@ class HomePage extends Component {
       case 10: dept = "Property Tax"; break;
       case 11: dept = "Garbage"; break;
       case 12: dept = "Health"; break;
+      case 13: dept = false;
     }
 
     const posts = [];
 
-    var postCollecton = this.props.firebase.db.collectionGroup("userPosts");
-    postCollecton.where("type", "array-contains", dept).orderBy("creation", "desc").get()
+    var postCollection = this.props.firebase.db.collectionGroup("userPosts");
+    if(dept) {
+    postCollection.where("type", "array-contains", dept).orderBy("creation", "desc").get()
     .then(response => {
       response.forEach(document => {
         const fetchedPost = {
@@ -192,6 +200,23 @@ class HomePage extends Component {
         });
       })
     })
+  }
+  else {
+    postCollection.orderBy("creation", "asc").get()
+    .then(response => {
+      response.forEach(document => {
+        const fetchedPost = {
+          id: document.id,
+          ...document.data()
+        };
+        posts.push(fetchedPost);
+        this.setState({
+          users: posts,
+          loading: false,
+        });
+      })
+    })
+  }
   }
 
 //   handleCheckChange(event) {
@@ -622,6 +647,7 @@ class HomePage extends Component {
             <MenuItem value={10}>Property Tax</MenuItem>
             <MenuItem value={11}>Garbage</MenuItem>
             <MenuItem value={12}>Health</MenuItem>
+            <MenuItem value={13}>All</MenuItem>
           </Select>
         </FormControl>
         </div>
@@ -659,7 +685,7 @@ class HomePage extends Component {
           <Table stickyHeader aria-label="sticky table" size="small">
             <TableHead>
               <TableRow>
-              <TableCell><div className="tableHead">Dept</div></TableCell>
+              {/* <TableCell><div className="tableHead">Dept</div></TableCell> */}
               <TableCell><div className="tableHead">Location</div></TableCell>
               <TableCell><div className="tableHead">Title</div></TableCell>
               <TableCell><div className="tableHead">Date</div></TableCell>
@@ -668,8 +694,8 @@ class HomePage extends Component {
             </TableHead>
             <TableBody>
               {users.map((row) => (
-                <TableRow key={row.id}>
-                  <TableCell><div style={{backgroundColor: this.returnColor(row.type[0])}}>.</div></TableCell>
+                <TableRow key={row.id} style={{backgroundColor: this.returnColor(row.type[0])}}>
+                  {/* <TableCell><div style={{backgroundColor: this.returnColor(row.type[0])}}>.</div></TableCell> */}
                   <TableCell>{row.location}</TableCell>
                   <TableCell>{row.title}</TableCell>
                   <TableCell>{row.creation.toDate().toString().substring(0, row.creation.toDate().toString().lastIndexOf('G'))}</TableCell>
