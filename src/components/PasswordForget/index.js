@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
  
 import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
  
 const PasswordForgetPage = () => (
+  <Grid container spacing={3}>
+      <Grid item xs>
+      </Grid>
+      <Grid item xs={6}>
   <div>
-    <h1>PasswordForget</h1>
+    <h1>Retrieve Password</h1>
     <PasswordForgetForm />
   </div>
+  </Grid>
+  <Grid item xs>
+      </Grid>
+  </Grid>
 );
  
 const INITIAL_STATE = {
@@ -56,7 +65,8 @@ class PasswordForgetFormBase extends Component {
           type="text"
           placeholder="Email Address"
         />
-        <button disabled={isInvalid} type="submit">
+        <button disabled={isInvalid} type="submit"
+        style={{marginLeft:'12px'}}>
           Reset My Password
         </button>
  

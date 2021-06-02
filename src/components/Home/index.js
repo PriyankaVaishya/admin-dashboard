@@ -169,7 +169,7 @@ class HomePage extends Component {
     switch(choice) {
       case 1: dept = "Electrical"; break;
       case 2: dept = "Encroachment"; break;
-      case 3: dept = "Stray Animals"; break;
+      case 3: dept = "Stray Dogs"; break;
       case 4: dept = "Garden"; break;
       case 5: dept = "Road"; break;
       case 6: dept = "Building Permission"; break;
@@ -570,7 +570,7 @@ class HomePage extends Component {
     if(dept === "Road")
     return "#d2cbaf";
 
-    if(dept === "Stray Animals")
+    if(dept === "Stray Dogs")
     return "#e0dddd";
 
     if(dept === "Building Permission")
@@ -589,7 +589,7 @@ class HomePage extends Component {
     return "#f1e4dc";
 
     if(dept === "Garbage")
-    return 
+    return "#f1e4dc"
 
     if(dept === "Health")
     return "#e6f9f1";
@@ -637,7 +637,7 @@ class HomePage extends Component {
           >
             <MenuItem value={1}>Electrical</MenuItem>
             <MenuItem value={2}>Encroachment</MenuItem>
-            <MenuItem value={3}>Stray Animals</MenuItem>
+            <MenuItem value={3}>Stray Dogs</MenuItem>
             <MenuItem value={4}>Garden</MenuItem>
             <MenuItem value={5}>Road</MenuItem>
             <MenuItem value={6}>Building Permission</MenuItem>

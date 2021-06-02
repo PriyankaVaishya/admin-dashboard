@@ -24,9 +24,11 @@ const SignInPage = () => (
   <Container component="main" maxWidth="xs">
   <CssBaseline />
   <div className={useStyles.paper}>
+    <div style={{marginLeft: '41%', marginTop: '10%'}}>
     <Avatar className={useStyles.avatar}>
       <LockOutlinedIcon />
     </Avatar>
+    </div>
     <Typography component="h1" variant="h5">
       Sign in
     </Typography>
@@ -48,10 +50,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
   },
-  avatar: {
-    margin: theme.spacing(1),
-    backgroundColor: theme.palette.secondary.main,
-  },
+  
   form: {
     width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(1),
