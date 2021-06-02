@@ -49,8 +49,8 @@ export default function SimpleModal(props) {
 
   const handleClose = () => {
     setOpen(false);
-    // if(reload)
-    // window.location.reload();
+    if(reload)
+    window.location.reload();
   };
 
   const searchButton = (event) => {

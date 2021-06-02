@@ -44,6 +44,7 @@ code {
 
   .titleCenter {
     margin-left: 41%;
+    padding-top: 1.5%;
   }
 
   .tab {
@@ -66,4 +67,22 @@ code {
   .leaflet-container {
     width: 80wh; 
     height: 80vh;
+  }
+
+
+  .navLinkDiv {
+    display: ruby;
+  }
+
+  /* .navLinkDiv:hover {
+    display: ruby;
+    background-color: lavender;
+  } */
+
+  .navIcon {
+    margin-top: 5px;
+  }
+
+  .navTitle {
+    font-size: large;
   }

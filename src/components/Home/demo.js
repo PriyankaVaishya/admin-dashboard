@@ -15,24 +15,24 @@ function updateTemp(props, userID, postID, choice) {
 
     if(choice == 4) {
         alert("This will shift the complaint to closed complaints.");
-        // firebase.collection('posts').doc(userID)
-        //         .collection('userPosts').doc(postID).get().then(document => {
-        //           const fetchedPost = {
-        //             id: document.id,
-        //             ...document.data()
-        //           };
+        firebase.collection('posts').doc(userID)
+                .collection('userPosts').doc(postID).get().then(document => {
+                  const fetchedPost = {
+                    id: document.id,
+                    ...document.data()
+                  };
 
-        //         this.props.firebase.db.collection('posts').doc(userID)
-        //        .collection('closedComplaints').doc(postID).set(fetchedPost);
+                this.props.firebase.db.collection('posts').doc(userID)
+               .collection('closedComplaints').doc(postID).set(fetchedPost);
 
-        //        this.props.firebase.db.collection('posts').doc(userID)
-        //        .collection('userPosts').doc(postID).delete(
-        //          console.log("Deleted")
-        //        ).catch(error => 
-        //         console.error("Error removing post: ", error));
+               this.props.firebase.db.collection('posts').doc(userID)
+               .collection('userPosts').doc(postID).delete(
+                 console.log("Deleted")
+               ).catch(error => 
+                console.error("Error removing post: ", error));
 
-        //         });     
-        //      window.location.reload();
+                });     
+             window.location.reload();
 
     }
 
@@ -93,8 +93,8 @@ export default function SimpleModal(props) {
 
   const handleClose = () => {
     setOpen(false);
-    // if(reload)
-    // window.location.reload();
+    if(reload)
+    window.location.reload();
   };
 
   const updateTemp = (userID, postID, choice) => {
@@ -102,23 +102,23 @@ export default function SimpleModal(props) {
 
     if(choice == 4) {
         alert("This will shift the complaint to closed complaints.");
-        // props.firebase.collection('posts').doc(userID)
-        //         .collection('userPosts').doc(postID).get().then(document => {
-        //           const fetchedPost = {
-        //             id: document.id,
-        //             ...document.data()
-        //           };
+        props.firebase.collection('posts').doc(userID)
+                .collection('userPosts').doc(postID).get().then(document => {
+                  const fetchedPost = {
+                    id: document.id,
+                    ...document.data()
+                  };
 
-        //         props.firebase.collection('posts').doc(userID)
-        //        .collection('closedComplaints').doc(postID).set(fetchedPost);
+                props.firebase.collection('posts').doc(userID)
+               .collection('closedComplaints').doc(postID).set(fetchedPost);
 
-        //        props.firebase.collection('posts').doc(userID)
-        //        .collection('userPosts').doc(postID).delete(
-        //          console.log("Deleted")
-        //        ).catch(error => 
-        //         console.error("Error removing post: ", error));
+               props.firebase.collection('posts').doc(userID)
+               .collection('userPosts').doc(postID).delete(
+                 console.log("Deleted")
+               ).catch(error => 
+                console.error("Error removing post: ", error));
 
-        //         });        
+                });        
 
     }
 
