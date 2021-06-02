@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
+
   paper: {
     padding: theme.spacing(2),
     textAlign: 'center',
@@ -49,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 class HomePage extends Component {
   constructor(props) {
     super(props);
- 
+
     this.state = {
       loading: false,
       users: [],
@@ -77,7 +78,7 @@ class HomePage extends Component {
 
             firstUserList.forEach(user => {
               this.props.firebase.db.collection('posts').doc(user).
-              collection('userPosts').orderBy("creation", "desc").get()
+              collection('userPosts').get()
                 .then(response => {
                   response.forEach(document => {
                     const fetchedPost = {
@@ -86,19 +87,24 @@ class HomePage extends Component {
                       ...document.data()
                     };
                     posts.push(fetchedPost);
-                    this.setState({
-                      users: posts,
-                      loading: false,
-                    });
+                    this.props.firebase.db.collection('posts').doc(user)
+                      .collection('userPosts').doc(fetchedPost.id).set({
+                    user: user
+                }, { merge: true });
+                    // this.setState({
+                    //   users: posts,
+                    //   loading: false,
+                    // });
                   });
-                  console.log(posts);
+                  this.searchByDept(13);
+                  //console.log(posts);
                 }).catch(error => {
                   console.log(error);
                 });
               });
             }).catch(error => {
               console.log(error);
-            });            
+            });
   }
 
   updateTemp(userID, postID, choice) {
@@ -107,7 +113,7 @@ class HomePage extends Component {
 
     // if(choice == 4) {
     //       console.log(userID);
-    // this.setState({ users: this.state.users.filter(function(user) { 
+    // this.setState({ users: this.state.users.filter(function(user) {
     //   return user.id !== postID })});
     // }
 
@@ -133,7 +139,7 @@ class HomePage extends Component {
   }
 }
 
-  updateStatus(userID, postID) { 
+  updateStatus(userID, postID) {
 
     this.props.firebase.db.collection('posts').doc(userID)
                 .collection('userPosts').doc(postID).get().then(document => {
@@ -148,13 +154,13 @@ class HomePage extends Component {
                this.props.firebase.db.collection('posts').doc(userID)
                .collection('userPosts').doc(postID).delete(
                  console.log("Deleted")
-               ).catch(error => 
+               ).catch(error =>
                 console.error("Error removing post: ", error));
 
-              this.setState({ users: this.state.users.filter(function(user) { 
+              this.setState({ users: this.state.users.filter(function(user) {
                 return user.id !== postID })});
 
-                });        
+                });
   }
 
 
@@ -173,12 +179,14 @@ class HomePage extends Component {
       case 10: dept = "Property Tax"; break;
       case 11: dept = "Garbage"; break;
       case 12: dept = "Health"; break;
+      case 13: dept = false;
     }
 
     const posts = [];
 
-    var postCollecton = this.props.firebase.db.collectionGroup("userPosts");
-    postCollecton.where("type", "array-contains", dept).orderBy("creation", "desc").get()
+    var postCollection = this.props.firebase.db.collectionGroup("userPosts");
+    if(dept) {
+    postCollection.where("type", "array-contains", dept).orderBy("creation", "desc").get()
     .then(response => {
       response.forEach(document => {
         const fetchedPost = {
@@ -193,6 +201,23 @@ class HomePage extends Component {
       })
     })
   }
+  else {
+    postCollection.orderBy("creation", "asc").get()
+    .then(response => {
+      response.forEach(document => {
+        const fetchedPost = {
+          id: document.id,
+          ...document.data()
+        };
+        posts.push(fetchedPost);
+        this.setState({
+          users: posts,
+          loading: false,
+        });
+      })
+    })
+  }
+  }
 
 //   handleCheckChange(event) {
 //     const posts = [];
@@ -202,7 +227,7 @@ class HomePage extends Component {
 //       if(event.target.name == "area") {
 //         if(event.target.checked == true) {
 //           if(this.checkedViolation) {
-            
+
 //             postCollecton.where("type", "array-contains", this.dept).
 //             where("isCovidArea", "==", true).
 //             where("isCovidViolation", "==", true)
@@ -244,7 +269,7 @@ class HomePage extends Component {
 //     else {
 
 //       if(this.checkedViolation) {
-              
+
 //         postCollecton.where("type", "array-contains", this.dept).
 //         where("isCovidViolation", "==", true)
 //         .get()
@@ -279,14 +304,14 @@ class HomePage extends Component {
 //   })
 //   })
 //   }
-    
+
 //   }
 // }
 
 //         if(event.target.name == "violation") {
 //           if(event.target.checked == true) {
 //             if(this.checkedArea) {
-              
+
 //               postCollecton.where("type", "array-contains", this.dept).
 //               where("isCovidArea", "==", true).
 //               where("isCovidViolation", "==", true)
@@ -327,7 +352,7 @@ class HomePage extends Component {
 //         else {
 
 //         if(this.checkedArea) {
-                
+
 //           postCollecton.where("type", "array-contains", this.dept).
 //           where("isCovidArea", "==", true)
 //           .get()
@@ -371,7 +396,7 @@ class HomePage extends Component {
 //       if(event.target.name == "area") {
 //         if(event.target.checked == true) {
 //           if(this.checkedViolation) {
-            
+
 //             postCollecton.where("isCovidArea", "==", true).
 //             where("isCovidViolation", "==", true)
 //             .get()
@@ -410,7 +435,7 @@ class HomePage extends Component {
 //     else {
 
 //       if(this.checkedViolation) {
-              
+
 //         postCollecton.where("isCovidViolation", "==", true)
 //         .get()
 //     .then(response => {
@@ -443,14 +468,14 @@ class HomePage extends Component {
 //   })
 //   })
 //   }
-    
+
 //   }
 // }
 
 //         if(event.target.name == "violation") {
 //           if(event.target.checked == true) {
 //             if(this.checkedArea) {
-              
+
 //               postCollecton.where("type", "array-contains", this.dept).
 //               where("isCovidArea", "==", true).
 //               where("isCovidViolation", "==", true)
@@ -491,7 +516,7 @@ class HomePage extends Component {
 //         else {
 
 //         if(this.checkedArea) {
-                
+
 //           postCollecton.where("type", "array-contains", this.dept).
 //           where("isCovidArea", "==", true)
 //           .get()
@@ -564,20 +589,20 @@ class HomePage extends Component {
     return "#f1e4dc";
 
     if(dept === "Garbage")
-    return 
+    return
 
     if(dept === "Health")
     return "#e6f9f1";
 
-    else 
+    else
     return "white";
-  
+
   }
 
 
   render() {
     const { users, loading, showDetails } = this.state;
- 
+
     return (
       <div>
         <div className="titleCenter">
@@ -592,7 +617,7 @@ class HomePage extends Component {
           <CircularProgress />
           </div>}
 
-        {!loading && 
+        {!loading &&
         <div>
         <div>
           <p>
@@ -600,7 +625,7 @@ class HomePage extends Component {
                 <Grid item xs={3}>
                 </Grid>
                 <Grid item xs={3}>
-                  Search by Department: 
+                  Search by Department:
         <div className="tab">
         <FormControl className={useStyles.formControl}>
         <Select
@@ -622,6 +647,7 @@ class HomePage extends Component {
             <MenuItem value={10}>Property Tax</MenuItem>
             <MenuItem value={11}>Garbage</MenuItem>
             <MenuItem value={12}>Health</MenuItem>
+            <MenuItem value={13}>All</MenuItem>
           </Select>
         </FormControl>
         </div>
@@ -629,7 +655,7 @@ class HomePage extends Component {
         {/* <Grid item xs={3}>
         <FormGroup row>
           <FormControlLabel
-            control={<Checkbox 
+            control={<Checkbox
               checked={this.state.checkedArea} onChange={this.handleCheckChange} name="area" color="primary"/>}
             label="Covid Area"
           />
@@ -650,7 +676,7 @@ class HomePage extends Component {
         </p>
         </div>
 
-        <div className={useStyles.root}> 
+        <div className={useStyles.root}>
         <Grid container spacing={2}>
         <Grid item xs>
         </Grid>
@@ -659,7 +685,7 @@ class HomePage extends Component {
           <Table stickyHeader aria-label="sticky table" size="small">
             <TableHead>
               <TableRow>
-              <TableCell><div className="tableHead">Dept</div></TableCell>
+              {/* <TableCell><div className="tableHead">Dept</div></TableCell> */}
               <TableCell><div className="tableHead">Location</div></TableCell>
               <TableCell><div className="tableHead">Title</div></TableCell>
               <TableCell><div className="tableHead">Date</div></TableCell>
@@ -668,8 +694,8 @@ class HomePage extends Component {
             </TableHead>
             <TableBody>
               {users.map((row) => (
-                <TableRow key={row.id}>
-                  <TableCell><div style={{backgroundColor: this.returnColor(row.type[0])}}>.</div></TableCell>
+                <TableRow key={row.id} style={{backgroundColor: this.returnColor(row.type[0])}}>
+                  {/* <TableCell><div style={{backgroundColor: this.returnColor(row.type[0])}}>.</div></TableCell> */}
                   <TableCell>{row.location}</TableCell>
                   <TableCell>{row.title}</TableCell>
                   <TableCell>{row.creation.toDate().toString().substring(0, row.creation.toDate().toString().lastIndexOf('G'))}</TableCell>

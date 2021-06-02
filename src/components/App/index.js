@@ -12,14 +12,16 @@ import PasswordForgetPage from '../PasswordForget';
 import HomePage from '../Home';
 import AccountPage from '../Account';
 import AdminPage from '../Admin';
- 
+import ClosedComplaints from '../ClosedComplaints'
+
 import * as ROUTES from '../../constants/routes';
 import { withFirebase } from '../Firebase';
- 
+import Maps from '../Map';
+
 class App extends Component {
   constructor(props) {
     super(props);
- 
+
     this.state = {
       authUser: null,
     };
@@ -38,15 +40,15 @@ class App extends Component {
   componentWillUnmount() {
     this.listener();
   }
- 
+
   render() {
     return (
       <Router>
         <div>
           <Navigation authUser={this.state.authUser} />
- 
+
           <hr/>
- 
+
           <Route exact path={ROUTES.LANDING} component={LandingPage} />
           <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
           <Route path={ROUTES.SIGN_IN} component={SignInPage} />
@@ -54,6 +56,8 @@ class App extends Component {
           <Route path={ROUTES.HOME} component={HomePage} />
           <Route path={ROUTES.ACCOUNT} component={AccountPage} />
           <Route path={ROUTES.ADMIN} component={AdminPage} />
+          <Route path={ROUTES.CLOSEDCOMPLAINTS} component={ClosedComplaints} />
+          <Route path={ROUTES.MAP} component={Maps} />
         </div>
       </Router>
     );

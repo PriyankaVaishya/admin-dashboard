@@ -102,23 +102,23 @@ export default function SimpleModal(props) {
 
     if(choice == 4) {
         alert("This will shift the complaint to closed complaints.");
-        // firebase.collection('posts').doc(userID)
+        // props.firebase.collection('posts').doc(userID)
         //         .collection('userPosts').doc(postID).get().then(document => {
         //           const fetchedPost = {
         //             id: document.id,
         //             ...document.data()
         //           };
 
-        //         this.props.firebase.db.collection('posts').doc(userID)
+        //         props.firebase.collection('posts').doc(userID)
         //        .collection('closedComplaints').doc(postID).set(fetchedPost);
 
-        //        this.props.firebase.db.collection('posts').doc(userID)
+        //        props.firebase.collection('posts').doc(userID)
         //        .collection('userPosts').doc(postID).delete(
         //          console.log("Deleted")
-        //        ).catch(error => 
+        //        ).catch(error =>
         //         console.error("Error removing post: ", error));
 
-        //         });        
+        //         });
 
     }
 
@@ -151,7 +151,7 @@ export default function SimpleModal(props) {
       <Grid container spacing={3}>
         <Grid item xs={6}>
         <p id="simple-modal-description">
-         <b><i>Department: </i></b> {props.row.type[0]}   
+         <b><i>Department: </i></b> {props.row.type[0]}
        </p>
        <p>
        <b><i>Location: </i></b> {props.row.location}
@@ -184,13 +184,13 @@ export default function SimpleModal(props) {
        </p>
         </Grid>
         <Grid item xs={6}>
-        {props.row.image && 
+        {props.row.image &&
        <div>
            <img src={props.row.image} width="250" height="250"></img>
        </div>
        }
         </Grid>
-        </Grid>        
+        </Grid>
     </div>
   );
 
@@ -210,4 +210,3 @@ export default function SimpleModal(props) {
     </div>
   );
 }
-
