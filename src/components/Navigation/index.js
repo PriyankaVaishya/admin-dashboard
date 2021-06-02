@@ -16,8 +16,11 @@ import { withStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
 import HomeIcon from '@material-ui/icons/Home';
+import RoomIcon from '@material-ui/icons/Room';
+import AssignmentTurnedInIcon from '@material-ui/icons/AssignmentTurnedIn';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import DashboardIcon from '@material-ui/icons/Dashboard';
+import FormatListBulletedIcon from '@material-ui/icons/FormatListBulleted';
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
@@ -137,16 +140,6 @@ const NavigationAuth = (firebase) => (
         }}
       >
         <List>
-                      <ListItem>
-                        <ListItemIcon>
-                          <IconButton edge="start" color="inherit" aria-label="menu">
-                            <Link to={ROUTES.HOME}>
-                            <HomeIcon />
-                            </Link>
-                          </IconButton>
-                        </ListItemIcon>
-                        <ListItemText primary="Home" />
-                      </ListItem>
                       <ListItem >
                         <ListItemIcon>
                         <IconButton edge="start" color="inherit" aria-label="menu">
@@ -160,6 +153,36 @@ const NavigationAuth = (firebase) => (
                       <ListItem>
                         <ListItemIcon>
                         <IconButton edge="start" color="inherit" aria-label="menu">
+                            <Link to={ROUTES.HOME}>
+                                <FormatListBulletedIcon />
+                            </Link>
+                        </IconButton>
+                        </ListItemIcon>
+                        <ListItemText primary="Current Complaints" />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <IconButton edge="start" color="inherit" aria-label="menu">
+                            <Link to={ROUTES.CLOSEDCOMPLAINTS}>
+                            <AssignmentTurnedInIcon />
+                            </Link>
+                          </IconButton>
+                        </ListItemIcon>
+                        <ListItemText primary="Closed Complaints" />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                          <IconButton edge="start" color="inherit" aria-label="menu">
+                            <Link to={ROUTES.MAP}>
+                            <RoomIcon />
+                            </Link>
+                          </IconButton>
+                        </ListItemIcon>
+                        <ListItemText primary="Maps" />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                        <IconButton edge="start" color="inherit" aria-label="menu">
                         <Link to={ROUTES.ACCOUNT}>
                           <AccountCircleIcon />
                           </Link>
@@ -168,10 +191,10 @@ const NavigationAuth = (firebase) => (
                         <ListItemText primary="Account" />
                       </ListItem>
                       <ListItem >
-                      <ListItemIcon>
-                        <SignOutButton />
-                      </ListItemIcon>
-                      <ListItemText primary="Sign Out" />
+                        <ListItemIcon>
+                            <SignOutButton />
+                        </ListItemIcon>
+                        <ListItemText primary="Sign Out" />
                       </ListItem>
                     </List>
       </Drawer>
