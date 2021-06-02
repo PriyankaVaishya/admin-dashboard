@@ -153,16 +153,6 @@ const NavigationAuth = (firebase) => (
                       <ListItem>
                         <ListItemIcon>
                         <IconButton edge="start" color="inherit" aria-label="menu">
-                        <Link to={ROUTES.ACCOUNT}>
-                          <AccountCircleIcon />
-                          </Link>
-                          </IconButton>
-                        </ListItemIcon>
-                        <ListItemText primary="Account" />
-                      </ListItem>
-                      <ListItem>
-                        <ListItemIcon>
-                        <IconButton edge="start" color="inherit" aria-label="menu">
                             <Link to={ROUTES.HOME}>
                                 <FormatListBulletedIcon />
                             </Link>
@@ -173,7 +163,7 @@ const NavigationAuth = (firebase) => (
                       <ListItem>
                         <ListItemIcon>
                           <IconButton edge="start" color="inherit" aria-label="menu">
-                            <Link to={ROUTES.HOME}>
+                            <Link to={ROUTES.CLOSEDCOMPLAINTS}>
                             <AssignmentTurnedInIcon />
                             </Link>
                           </IconButton>
@@ -183,12 +173,22 @@ const NavigationAuth = (firebase) => (
                       <ListItem>
                         <ListItemIcon>
                           <IconButton edge="start" color="inherit" aria-label="menu">
-                            <Link to={ROUTES.HOME}>
+                            <Link to={ROUTES.MAP}>
                             <RoomIcon />
                             </Link>
                           </IconButton>
                         </ListItemIcon>
                         <ListItemText primary="Maps" />
+                      </ListItem>
+                      <ListItem>
+                        <ListItemIcon>
+                        <IconButton edge="start" color="inherit" aria-label="menu">
+                        <Link to={ROUTES.ACCOUNT}>
+                          <AccountCircleIcon />
+                          </Link>
+                          </IconButton>
+                        </ListItemIcon>
+                        <ListItemText primary="Account" />
                       </ListItem>
                       <ListItem >
                         <ListItemIcon>
@@ -215,7 +215,7 @@ const NavigationAuth = (firebase) => (
   //   </li>
   // </ul>
 );
- 
+
 const NavigationNonAuth = () => (
   <div className={useStyles.root}>
       <AppBar position="static">
@@ -269,5 +269,5 @@ const NavigationNonAuth = () => (
   //   </li>
   // </ul>
 );
- 
+
 export default Navigation;
