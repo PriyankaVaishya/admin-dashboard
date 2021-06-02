@@ -49,7 +49,7 @@ class ClosedComplaints extends Component {
 
     render() {
         return(
-            <div>
+            <div style={{paddingTop: "2%"}}>
                 <Grid container spacing={3}>
                     <Grid item xs>
                     </Grid>

@@ -19,6 +19,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Demo from './demo';
+import legend from './legend.jpeg';
 
 
 
@@ -559,44 +560,43 @@ class HomePage extends Component {
 
   returnColor(dept) {
     if(dept === "Electrical")
-      return "aliceblue";
-
-    if(dept === "Encroachment")
-      return "antiquewhite";
-
-    if(dept === "Garden")
-    return "#d1ffbd";
-
-    if(dept === "Road")
-    return "#d2cbaf";
-
-    if(dept === "Stray Dogs")
-    return "#e0dddd";
-
-    if(dept === "Building Permission")
-    return "#d9e3e5";
-
-    if(dept === "Water Supply")
-    return "#dcdbca";
-
-    if(dept === "Drainage")
-    return "#beb4ab";
-
-    if(dept === "Traffic")
-    return "#e9d3ba";
-
-    if(dept === "Property Tax")
-    return "#f1e4dc";
-
-    if(dept === "Garbage")
-    return "#f1e4dc"
-
-    if(dept === "Health")
-    return "#e6f9f1";
-
-    else 
-    return "white";
+    return "#EEB2E9";
   
+      if(dept === "Encroachment")
+    return "#C4C1C3";
+  
+      if(dept === "Garden")
+      return "#67B5AE";
+  
+      if(dept === "Road")
+      return "#F57777";
+  
+      if(dept === "Stray Dogs")
+      return "#E5AA69";
+  
+      if(dept === "Building Permission")
+      return "#B28DD1";
+  
+      if(dept === "Water Supply")
+      return "#86BCD6";
+  
+      if(dept === "Drainage")
+      return "#96CB80";
+  
+      if(dept === "Traffic")
+      return "#B19D8A";
+  
+      if(dept === "Property Tax")
+      return "#7E9FD5";
+  
+      if(dept === "Garbage")
+      return "#ECD67E";
+  
+      if(dept === "Health")
+      return "#B17394";
+  
+      else
+      return "#FFFFFF";
   }
 
 
@@ -709,7 +709,7 @@ class HomePage extends Component {
           </Paper>
         </Grid>
         <Grid item xs>
-           USE COLOR LEGEND 
+           <img src={legend} style={{position: 'fixed', paddingLeft: 'inherit', height: "38%"}}></img>
         </Grid>
       </Grid>
         </div>
