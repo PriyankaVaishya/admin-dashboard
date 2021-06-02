@@ -10,53 +10,6 @@ import Grid from '@material-ui/core/Grid';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import IconButton from '@material-ui/core/IconButton';
 
-function updateTemp(props, userID, postID, choice) {
-
-
-    if(choice == 4) {
-        alert("This will shift the complaint to closed complaints.");
-        firebase.collection('posts').doc(userID)
-                .collection('userPosts').doc(postID).get().then(document => {
-                  const fetchedPost = {
-                    id: document.id,
-                    ...document.data()
-                  };
-
-                this.props.firebase.db.collection('posts').doc(userID)
-               .collection('closedComplaints').doc(postID).set(fetchedPost);
-
-               this.props.firebase.db.collection('posts').doc(userID)
-               .collection('userPosts').doc(postID).delete(
-                 console.log("Deleted")
-               ).catch(error => 
-                console.error("Error removing post: ", error));
-
-                });     
-             window.location.reload();
-
-    }
-
-      if(choice == 1) {
-        props.firebase.collection('posts').doc(userID)
-                .collection('userPosts').doc(postID).set({
-          status: 'Processing'
-      }, { merge: true });
-      }
-
-    if(choice == 2) {
-      props.firebase.collection('posts').doc(userID)
-              .collection('userPosts').doc(postID).set({
-        status: 'Assigned to Operator'
-    }, { merge: true });
-    }
-
-  if(choice == 3) {
-    props.firebase.collection('posts').doc(userID)
-            .collection('userPosts').doc(postID).set({
-      status: 'Work in Progress'
-  }, { merge: true });
-  }
-}
 
 function getModalStyle() {
   const top = 50;
