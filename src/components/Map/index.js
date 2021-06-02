@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import 'leaflet/dist/leaflet.css';
+import 'react-leaflet-markercluster/dist/styles.min.css'; 
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import MarkerClusterGroup from 'react-leaflet-markercluster';
 // import iconPerson from './icon';
 import L from 'leaflet';
 
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import Grid from '@material-ui/core/Grid';
+
+import test from './test.json';
 
 let DefaultIcon = L.icon({
     iconUrl: icon,
@@ -38,11 +42,36 @@ class Maps extends Component {
                 // attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[30.7333, 76.7794]} >
+            <MarkerClusterGroup>
+            {test.map((row) => (
+                <Marker position={[row.longitude, row.latitude]} >
+                <Popup>
+                    {console.log(row)}
+                A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+            ))}
+            {/* <Marker position={[30.7333, 76.7794]} >
                 <Popup>
                 A pretty CSS3 popup. <br /> Easily customizable.
                 </Popup>
             </Marker>
+            <Marker position={[30.7667, 76.7774]} >
+                <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+            <Marker position={[30.7667, 76.7777]} >
+                <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+            <Marker position={[30.7335, 76.7790]} >
+                <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+            </Marker> */}
+            </MarkerClusterGroup>
             </MapContainer>
 
             </div>

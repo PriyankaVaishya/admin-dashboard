@@ -1,0 +1,1402 @@
+[
+  {
+    "id": 0,
+    "longitude": 30.72356108782661,
+    "latitude": 76.77056424349661,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 1,
+    "longitude": 30.74854010005656,
+    "latitude": 76.7789127960619,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 2,
+    "longitude": 30.730958598506948,
+    "latitude": 76.76348048037758,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 3,
+    "longitude": 30.74315632689043,
+    "latitude": 76.77869635245852,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 4,
+    "longitude": 30.73286437747136,
+    "latitude": 76.78028407720636,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 5,
+    "longitude": 30.73032332054768,
+    "latitude": 76.7818476076704,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 6,
+    "longitude": 30.742992921836798,
+    "latitude": 76.78888065085071,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 7,
+    "longitude": 30.726026735455978,
+    "latitude": 76.78867763471743,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 8,
+    "longitude": 30.73729731867701,
+    "latitude": 76.76057910664669,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 9,
+    "longitude": 30.725489893301233,
+    "latitude": 76.78509995436103,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 10,
+    "longitude": 30.743073214300875,
+    "latitude": 76.78207259366336,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 11,
+    "longitude": 30.740151951922375,
+    "latitude": 76.77919102266043,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 12,
+    "longitude": 30.72737072649793,
+    "latitude": 76.7789088038138,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 13,
+    "longitude": 30.73140385904974,
+    "latitude": 76.77426117612633,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 14,
+    "longitude": 30.731741006604803,
+    "latitude": 76.76276042200617,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 15,
+    "longitude": 30.73830047631137,
+    "latitude": 76.76298852360297,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 16,
+    "longitude": 30.74170818538362,
+    "latitude": 76.79064384624732,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 17,
+    "longitude": 30.71585461916354,
+    "latitude": 76.76375161992478,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 18,
+    "longitude": 30.72985330813177,
+    "latitude": 76.76945655240812,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 19,
+    "longitude": 30.73015736162739,
+    "latitude": 76.77543539406538,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 20,
+    "longitude": 30.73936624633977,
+    "latitude": 76.78293749862313,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 21,
+    "longitude": 30.72346207921056,
+    "latitude": 76.79181122993825,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 22,
+    "longitude": 30.715896680944933,
+    "latitude": 76.78308924748917,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 23,
+    "longitude": 30.725345036707708,
+    "latitude": 76.79157923384652,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 24,
+    "longitude": 30.734574139806007,
+    "latitude": 76.7745139898986,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 25,
+    "longitude": 30.738309177322176,
+    "latitude": 76.76818269032327,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 26,
+    "longitude": 30.721164665892356,
+    "latitude": 76.77332962084613,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 27,
+    "longitude": 30.744447383968446,
+    "latitude": 76.78920555753365,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 28,
+    "longitude": 30.72895726401985,
+    "latitude": 76.762135080265,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 29,
+    "longitude": 30.72786674808079,
+    "latitude": 76.77929308394424,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 30,
+    "longitude": 30.7267380270998,
+    "latitude": 76.78078869937191,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 31,
+    "longitude": 30.735426526367622,
+    "latitude": 76.76437025229542,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 32,
+    "longitude": 30.74981952900885,
+    "latitude": 76.7818037942356,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 33,
+    "longitude": 30.73129018519281,
+    "latitude": 76.78181935088655,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 34,
+    "longitude": 30.736838164765167,
+    "latitude": 76.7621515999494,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 35,
+    "longitude": 30.737183976493117,
+    "latitude": 76.78727698125417,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 36,
+    "longitude": 30.724994252519007,
+    "latitude": 76.78856661952656,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 37,
+    "longitude": 30.7399432582988,
+    "latitude": 76.76372558397038,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 38,
+    "longitude": 30.752112549615337,
+    "latitude": 76.79733869389462,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 39,
+    "longitude": 30.733718167646316,
+    "latitude": 76.76374435563648,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 40,
+    "longitude": 30.739150607387682,
+    "latitude": 76.77595537856466,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 41,
+    "longitude": 30.724477380898293,
+    "latitude": 76.77584769479752,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 42,
+    "longitude": 30.734119312486865,
+    "latitude": 76.7826373590405,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 43,
+    "longitude": 30.73396867219963,
+    "latitude": 76.7800953383605,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 44,
+    "longitude": 30.732817692858557,
+    "latitude": 76.76365020445499,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 45,
+    "longitude": 30.726519011774396,
+    "latitude": 76.77315969217868,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 46,
+    "longitude": 30.731192138464298,
+    "latitude": 76.76548519736744,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 47,
+    "longitude": 30.73819669586765,
+    "latitude": 76.7749761888824,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 48,
+    "longitude": 30.743258221529782,
+    "latitude": 76.76975353142294,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 49,
+    "longitude": 30.740875538128286,
+    "latitude": 76.76341603670657,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 50,
+    "longitude": 30.734232296561153,
+    "latitude": 76.7750129242502,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 51,
+    "longitude": 30.724242329807897,
+    "latitude": 76.77498632749088,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 52,
+    "longitude": 30.732010223490175,
+    "latitude": 76.77690983458479,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 53,
+    "longitude": 30.742802012321164,
+    "latitude": 76.76939841807182,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 54,
+    "longitude": 30.72920338915539,
+    "latitude": 76.78555865633075,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 55,
+    "longitude": 30.749400274571805,
+    "latitude": 76.76043133512229,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 56,
+    "longitude": 30.73279501483581,
+    "latitude": 76.78083649637635,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 57,
+    "longitude": 30.730525716750027,
+    "latitude": 76.76887627128635,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 58,
+    "longitude": 30.733070512318736,
+    "latitude": 76.77300523330219,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 59,
+    "longitude": 30.739414967930315,
+    "latitude": 76.79560680722477,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 60,
+    "longitude": 30.743947546645636,
+    "latitude": 76.77771899827572,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 61,
+    "longitude": 30.74285662816007,
+    "latitude": 76.77436567330571,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 62,
+    "longitude": 30.7369672257449,
+    "latitude": 76.7842973884127,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 63,
+    "longitude": 30.746294712782205,
+    "latitude": 76.78799579708016,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 64,
+    "longitude": 30.732939408311804,
+    "latitude": 76.7734648093277,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 65,
+    "longitude": 30.729747496473248,
+    "latitude": 76.78805917225691,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 66,
+    "longitude": 30.724773598634574,
+    "latitude": 76.76050079530107,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 67,
+    "longitude": 30.740099911179335,
+    "latitude": 76.78440318005138,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 68,
+    "longitude": 30.720804023394575,
+    "latitude": 76.76691144177404,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 69,
+    "longitude": 30.726800546856772,
+    "latitude": 76.78727303803494,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 70,
+    "longitude": 30.714313490883203,
+    "latitude": 76.78806243473551,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 71,
+    "longitude": 30.74593748443669,
+    "latitude": 76.76373900679597,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 72,
+    "longitude": 30.74134369182137,
+    "latitude": 76.79842613768322,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 73,
+    "longitude": 30.724270819011398,
+    "latitude": 76.79750167984564,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 74,
+    "longitude": 30.751118438775183,
+    "latitude": 76.79676242656286,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 75,
+    "longitude": 30.74153409431414,
+    "latitude": 76.79518324786828,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 76,
+    "longitude": 30.741764411241206,
+    "latitude": 76.77827530667172,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 77,
+    "longitude": 30.738083428627583,
+    "latitude": 76.7855357009874,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 78,
+    "longitude": 30.72891038545355,
+    "latitude": 76.79231435024487,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 79,
+    "longitude": 30.743538128289746,
+    "latitude": 76.77727595938225,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 80,
+    "longitude": 30.7266629930805,
+    "latitude": 76.79884693245111,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 81,
+    "longitude": 30.717350591872496,
+    "latitude": 76.77396792000741,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 82,
+    "longitude": 30.742693882098855,
+    "latitude": 76.7942401929957,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 83,
+    "longitude": 30.713974075328878,
+    "latitude": 76.78183722277234,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 84,
+    "longitude": 30.73906016958625,
+    "latitude": 76.79699521550397,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 85,
+    "longitude": 30.733859544451228,
+    "latitude": 76.7653937273501,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 86,
+    "longitude": 30.728818371599417,
+    "latitude": 76.78679578403623,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 87,
+    "longitude": 30.72568612620654,
+    "latitude": 76.77849612434855,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 88,
+    "longitude": 30.727209708156654,
+    "latitude": 76.79161297488648,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 89,
+    "longitude": 30.73445705152889,
+    "latitude": 76.76087046328996,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 90,
+    "longitude": 30.716120862214154,
+    "latitude": 76.76540492743005,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 91,
+    "longitude": 30.726707519823425,
+    "latitude": 76.76530009649188,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 92,
+    "longitude": 30.731468380821305,
+    "latitude": 76.78703247469672,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 93,
+    "longitude": 30.7395959463739,
+    "latitude": 76.77105469957888,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 94,
+    "longitude": 30.73497830538696,
+    "latitude": 76.7652846600509,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 95,
+    "longitude": 30.72987670645505,
+    "latitude": 76.77555072451369,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 96,
+    "longitude": 30.730871238050185,
+    "latitude": 76.77061992939637,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 97,
+    "longitude": 30.724069581104107,
+    "latitude": 76.78808275963895,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 98,
+    "longitude": 30.724302248120477,
+    "latitude": 76.77414909724388,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 99,
+    "longitude": 30.72356096246399,
+    "latitude": 76.77562580895783,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 100,
+    "longitude": 30.72988702671298,
+    "latitude": 76.76312765023837,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 101,
+    "longitude": 30.72673126318297,
+    "latitude": 76.79543763080393,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 102,
+    "longitude": 30.735431385607797,
+    "latitude": 76.77322965231805,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 103,
+    "longitude": 30.729729288018447,
+    "latitude": 76.7816804573646,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 104,
+    "longitude": 30.72471738905147,
+    "latitude": 76.79230992054345,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 105,
+    "longitude": 30.71951880687679,
+    "latitude": 76.77372398693973,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 106,
+    "longitude": 30.74534806832339,
+    "latitude": 76.78938219120103,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 107,
+    "longitude": 30.724204417717647,
+    "latitude": 76.77258366875117,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 108,
+    "longitude": 30.732478042254517,
+    "latitude": 76.77358899861483,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 109,
+    "longitude": 30.73483385263744,
+    "latitude": 76.78601959798058,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 110,
+    "longitude": 30.732931385924683,
+    "latitude": 76.78172059147558,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 111,
+    "longitude": 30.734311156927703,
+    "latitude": 76.76131373748721,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 112,
+    "longitude": 30.74673993206656,
+    "latitude": 76.7840041970461,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 113,
+    "longitude": 30.720636129174764,
+    "latitude": 76.78260223210391,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 114,
+    "longitude": 30.72481855009244,
+    "latitude": 76.7741423427246,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 115,
+    "longitude": 30.740408080957096,
+    "latitude": 76.78481834066234,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 116,
+    "longitude": 30.727846225546863,
+    "latitude": 76.79810447188403,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 117,
+    "longitude": 30.74001190372399,
+    "latitude": 76.79637017222902,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 118,
+    "longitude": 30.737465535952442,
+    "latitude": 76.77799530975007,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 119,
+    "longitude": 30.735797273570718,
+    "latitude": 76.77255427503177,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 120,
+    "longitude": 30.737657984333786,
+    "latitude": 76.7858273500079,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 121,
+    "longitude": 30.72964902664633,
+    "latitude": 76.78031609950375,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 122,
+    "longitude": 30.738953164280527,
+    "latitude": 76.77854000454676,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 123,
+    "longitude": 30.75076617783973,
+    "latitude": 76.78533192120591,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 124,
+    "longitude": 30.747298227757323,
+    "latitude": 76.76944389279139,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 125,
+    "longitude": 30.753045678089162,
+    "latitude": 76.77285339730983,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 126,
+    "longitude": 30.740884450552915,
+    "latitude": 76.79709556214956,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 127,
+    "longitude": 30.75255569795102,
+    "latitude": 76.7739718420233,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 128,
+    "longitude": 30.730345975473966,
+    "latitude": 76.78650021955801,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 129,
+    "longitude": 30.738512369868115,
+    "latitude": 76.7758539631563,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 130,
+    "longitude": 30.7180762140479,
+    "latitude": 76.7833964381987,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 131,
+    "longitude": 30.742877173408427,
+    "latitude": 76.78405471828026,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 132,
+    "longitude": 30.732216287921798,
+    "latitude": 76.7751370947088,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 133,
+    "longitude": 30.751456116178833,
+    "latitude": 76.77702401329034,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 134,
+    "longitude": 30.716398248473517,
+    "latitude": 76.79412583102744,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 135,
+    "longitude": 30.73034455407081,
+    "latitude": 76.76363469643935,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 136,
+    "longitude": 30.74080263123862,
+    "latitude": 76.76206062700125,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 137,
+    "longitude": 30.74956219408611,
+    "latitude": 76.78513166246584,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 138,
+    "longitude": 30.75066813892516,
+    "latitude": 76.78669420627156,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 139,
+    "longitude": 30.7358376462058,
+    "latitude": 76.77304808646181,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 140,
+    "longitude": 30.74274570643138,
+    "latitude": 76.77274233672354,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 141,
+    "longitude": 30.73423211488403,
+    "latitude": 76.76400465030304,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 142,
+    "longitude": 30.729298417867295,
+    "latitude": 76.76452588919796,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 143,
+    "longitude": 30.744377440558655,
+    "latitude": 76.7595117776154,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 144,
+    "longitude": 30.73762063625113,
+    "latitude": 76.7826108280466,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 145,
+    "longitude": 30.745568503884936,
+    "latitude": 76.7718107294052,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 146,
+    "longitude": 30.73119264957144,
+    "latitude": 76.77753517027499,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 147,
+    "longitude": 30.750289136847808,
+    "latitude": 76.7797191653935,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 148,
+    "longitude": 30.715657576288955,
+    "latitude": 76.79546321952776,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 149,
+    "longitude": 30.718978793742988,
+    "latitude": 76.7791093604498,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 150,
+    "longitude": 30.750111827106537,
+    "latitude": 76.77449660617827,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 151,
+    "longitude": 30.747948601494876,
+    "latitude": 76.77819548952304,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 152,
+    "longitude": 30.721325991951268,
+    "latitude": 76.79507357270805,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 153,
+    "longitude": 30.71403148350486,
+    "latitude": 76.78031042366771,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 154,
+    "longitude": 30.730030551870794,
+    "latitude": 76.79743756751483,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 155,
+    "longitude": 30.733948074771604,
+    "latitude": 76.79276905116359,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 156,
+    "longitude": 30.74852185126794,
+    "latitude": 76.78872572517113,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 157,
+    "longitude": 30.73138902956078,
+    "latitude": 76.78142122674086,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 158,
+    "longitude": 30.72730581812966,
+    "latitude": 76.77185782166251,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 159,
+    "longitude": 30.752409854686256,
+    "latitude": 76.7978715675381,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 160,
+    "longitude": 30.749165409370153,
+    "latitude": 76.78279169209523,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 161,
+    "longitude": 30.75029724723502,
+    "latitude": 76.78529548905217,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 162,
+    "longitude": 30.73939480002552,
+    "latitude": 76.78415825711849,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 163,
+    "longitude": 30.72411959124666,
+    "latitude": 76.781093518721,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 164,
+    "longitude": 30.73500728449492,
+    "latitude": 76.7800509415505,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 165,
+    "longitude": 30.726265975467722,
+    "latitude": 76.79825875607783,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 166,
+    "longitude": 30.73206559312665,
+    "latitude": 76.78644171599807,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 167,
+    "longitude": 30.719741847979087,
+    "latitude": 76.79776884281115,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 168,
+    "longitude": 30.735751138625343,
+    "latitude": 76.78626836972857,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 169,
+    "longitude": 30.733697417114495,
+    "latitude": 76.78450331672228,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 170,
+    "longitude": 30.737922591579654,
+    "latitude": 76.7713730754053,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 171,
+    "longitude": 30.74139993715064,
+    "latitude": 76.76866673099755,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 172,
+    "longitude": 30.716018808129753,
+    "latitude": 76.78123139728895,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 173,
+    "longitude": 30.72830803043698,
+    "latitude": 76.775663584379,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 174,
+    "longitude": 30.729933644066374,
+    "latitude": 76.77305350259805,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 175,
+    "longitude": 30.73647366023921,
+    "latitude": 76.78234634970462,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 176,
+    "longitude": 30.74082057384076,
+    "latitude": 76.7831160871006,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 177,
+    "longitude": 30.73530474582315,
+    "latitude": 76.77375564819037,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 178,
+    "longitude": 30.74836461403251,
+    "latitude": 76.78229387284904,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 179,
+    "longitude": 30.742594742108995,
+    "latitude": 76.77090387625141,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 180,
+    "longitude": 30.733433128912964,
+    "latitude": 76.79300685067666,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 181,
+    "longitude": 30.749240316818913,
+    "latitude": 76.78525954270289,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 182,
+    "longitude": 30.733777072666502,
+    "latitude": 76.78792089936468,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 183,
+    "longitude": 30.74233514315422,
+    "latitude": 76.76564463990066,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 184,
+    "longitude": 30.72527506542238,
+    "latitude": 76.78107032026101,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 185,
+    "longitude": 30.715577095371263,
+    "latitude": 76.7756807730154,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 186,
+    "longitude": 30.714857396401168,
+    "latitude": 76.79470708688814,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 187,
+    "longitude": 30.729794146549878,
+    "latitude": 76.7923202950693,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 188,
+    "longitude": 30.73907578083101,
+    "latitude": 76.77067740196331,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 189,
+    "longitude": 30.731209981477452,
+    "latitude": 76.79615619776659,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 190,
+    "longitude": 30.740227123759357,
+    "latitude": 76.79228129214205,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 191,
+    "longitude": 30.717629111315063,
+    "latitude": 76.79864312008388,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 192,
+    "longitude": 30.715790656142165,
+    "latitude": 76.77735311856799,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 193,
+    "longitude": 30.738896920243715,
+    "latitude": 76.78511145136683,
+    "is_covid_affected": "True",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 194,
+    "longitude": 30.732977649385116,
+    "latitude": 76.79209458327021,
+    "is_covid_affected": "False",
+    "is_following_norms": "False"
+  },
+  {
+    "id": 195,
+    "longitude": 30.731982735044873,
+    "latitude": 76.77283849684756,
+    "is_covid_affected": "True",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 196,
+    "longitude": 30.727072001594365,
+    "latitude": 76.79573810686023,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 197,
+    "longitude": 30.74419224576995,
+    "latitude": 76.77223143032231,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 198,
+    "longitude": 30.731924493686453,
+    "latitude": 76.78454483771104,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  },
+  {
+    "id": 199,
+    "longitude": 30.73550989029502,
+    "latitude": 76.78115345821402,
+    "is_covid_affected": "False",
+    "is_following_norms": "True"
+  }
+]
