@@ -13,7 +13,7 @@ const LandingPage = () => (
                 color:'white',
                 backgroundPosition: 'center',
              }}>
-      <h1 style={{ fontSize: '3em' }}>Welcome to Admin-Dashboard</h1>
+      <h1 style={{ fontSize: '3em' }}>Welcome to Smart Citizen Admin dashboard</h1>
   </div>
 );
  
