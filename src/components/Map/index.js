@@ -46,31 +46,12 @@ class Maps extends Component {
             {test.map((row) => (
                 <Marker position={[row.longitude, row.latitude]} >
                 <Popup>
-                    {console.log(row)}
-                A pretty CSS3 popup. <br /> Easily customizable.
+                    Covid affected: {row.is_covid_affected}
+                 <br />
+                 Covid norms followed: {row.is_following_norms}
                 </Popup>
             </Marker>
             ))}
-            {/* <Marker position={[30.7333, 76.7794]} >
-                <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
-            <Marker position={[30.7667, 76.7774]} >
-                <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
-            <Marker position={[30.7667, 76.7777]} >
-                <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
-            <Marker position={[30.7335, 76.7790]} >
-                <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker> */}
             </MarkerClusterGroup>
             </MapContainer>
 
