@@ -16,6 +16,7 @@ import ClosedComplaints from '../ClosedComplaints'
  
 import * as ROUTES from '../../constants/routes';
 import { withFirebase } from '../Firebase';
+import Maps from '../Map';
  
 class App extends Component {
   constructor(props) {
@@ -56,6 +57,7 @@ class App extends Component {
           <Route path={ROUTES.ACCOUNT} component={AccountPage} />
           <Route path={ROUTES.ADMIN} component={AdminPage} />
           <Route path={ROUTES.CLOSEDCOMPLAINTS} component={ClosedComplaints} />
+          <Route path={ROUTES.MAP} component={Maps} />
         </div>
       </Router>
     );

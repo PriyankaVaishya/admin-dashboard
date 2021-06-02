@@ -62,3 +62,8 @@ code {
     display: inline-block;
     margin-left: 135px;
   }
+
+  .leaflet-container {
+    width: 80wh; 
+    height: 80vh;
+  }
