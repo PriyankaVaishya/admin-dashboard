@@ -140,6 +140,9 @@ const NavigationAuth = (firebase) => (
         }}
       >
         <List>
+        <ListItem >
+          <ListItemText primary="Hello Admin" />
+          </ListItem>
                       <ListItem >
                         <ListItemIcon>
                         <IconButton edge="start" color="inherit" aria-label="menu">
