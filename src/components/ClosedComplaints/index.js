@@ -42,7 +42,7 @@ class ClosedComplaints extends Component {
 
 
     onChange = event => {
-        console.log(event.target.value);
+        //console.log(event.target.value);
         this.setState({refID: event.target.value});
         
       };

@@ -91,7 +91,9 @@ class HomePage extends Component {
                     this.props.firebase.db.collection('posts').doc(user)
                       .collection('userPosts').doc(fetchedPost.id).set({
                     user: user
-                }, { merge: true });
+                }, { merge: true }).catch(error => {
+                  console.log(error);
+                });;
                     // this.setState({
                     //   users: posts,
                     //   loading: false,
@@ -110,7 +112,7 @@ class HomePage extends Component {
 
   updateTemp(userID, postID, choice) {
 
-    console.log(postID);
+    // console.log(postID);
 
     // if(choice == 4) {
     //       console.log(userID);
@@ -122,21 +124,27 @@ class HomePage extends Component {
         this.props.firebase.db.collection('posts').doc(userID)
                 .collection('userPosts').doc(postID).set({
           status: 'Processing'
-      }, { merge: true });
+      }, { merge: true }).catch(error => {
+        console.log(error);
+      });;
       }
 
     if(choice == 2) {
       this.props.firebase.db.collection('posts').doc(userID)
               .collection('userPosts').doc(postID).set({
         status: 'Assigned to Operator'
-    }, { merge: true });
+    }, { merge: true }).catch(error => {
+      console.log(error);
+    });;
     }
 
   if(choice == 3) {
     this.props.firebase.db.collection('posts').doc(userID)
             .collection('userPosts').doc(postID).set({
       status: 'Work in Progress'
-  }, { merge: true });
+  }, { merge: true }).catch(error => {
+    console.log(error);
+  });;
   }
 }
 
@@ -150,18 +158,22 @@ class HomePage extends Component {
                   };
 
                 this.props.firebase.db.collection('posts').doc(userID)
-               .collection('closedComplaints').doc(postID).set(fetchedPost);
+               .collection('closedComplaints').doc(postID).set(fetchedPost).catch(error => {
+                console.log(error);
+              });;
 
                this.props.firebase.db.collection('posts').doc(userID)
                .collection('userPosts').doc(postID).delete(
-                 console.log("Deleted")
+                //  console.log("Deleted")
                ).catch(error => 
                 console.error("Error removing post: ", error));
 
               this.setState({ users: this.state.users.filter(function(user) { 
                 return user.id !== postID })});
 
-                });        
+                }).catch(error => {
+                  console.log(error);
+                });;        
   }
 
 
@@ -200,7 +212,9 @@ class HomePage extends Component {
           loading: false,
         });
       })
-    })
+    }).catch(error => {
+      console.log(error);
+    });
   }
   else {
     postCollection.orderBy("creation", "asc").get()
@@ -216,7 +230,9 @@ class HomePage extends Component {
           loading: false,
         });
       })
-    })
+    }).catch(error => {
+      console.log(error);
+    });
   }
   }
 

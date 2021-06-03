@@ -97,7 +97,9 @@ class SignInFormBase extends Component {
               this.props.history.push(ROUTES.HOME);
             }
             });
-          });
+          }).catch(error => {
+            console.log(error);
+          });;
 
       })
       .catch(error => {

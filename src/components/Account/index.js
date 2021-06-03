@@ -22,8 +22,16 @@ const AccountPage = () => (
                         backgroundPosition: 'center',
                      }}>
     <h1>Account Page</h1>
+    <Grid container spacing={2}>
+    <Grid item xs={6}>
+      Reset by mailing link: 
     <PasswordForgetForm />
+    </Grid>
+    <Grid item xs={6}>
+      Add new password: 
     <PasswordChangeForm />
+    </Grid>
+    </Grid>
   </div>
   </Grid>
   <Grid item xs>

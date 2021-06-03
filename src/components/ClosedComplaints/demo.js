@@ -110,15 +110,19 @@ export default function SimpleModal(props) {
                   };
 
                   props.firebase.collection('posts').doc(post.user)
-               .collection('userPosts').doc(props.refID).set(fetchedPost);
+               .collection('userPosts').doc(props.refID).set(fetchedPost).catch(error => {
+                console.log(error);
+              });;
 
                props.firebase.collection('posts').doc(post.user)
                .collection('closedComplaints').doc(props.refID).delete(
-                 console.log("Deleted")
+                 //console.log("Deleted")
                ).catch(error => 
                 console.error("Error removing post: ", error));
 
-                });        
+                }).catch(error => {
+                  console.log(error);
+                });;        
 
     event.preventDefault();
   }

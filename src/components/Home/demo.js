@@ -63,7 +63,9 @@ export default function SimpleModal(props) {
                   };
 
                 props.firebase.collection('posts').doc(userID)
-               .collection('closedComplaints').doc(postID).set(fetchedPost);
+               .collection('closedComplaints').doc(postID).set(fetchedPost).catch(error => {
+                console.log(error);
+              });;
 
                props.firebase.collection('posts').doc(userID)
                .collection('userPosts').doc(postID).delete(
@@ -71,7 +73,9 @@ export default function SimpleModal(props) {
                ).catch(error => 
                 console.error("Error removing post: ", error));
 
-                });        
+                }).catch(error => {
+                  console.log(error);
+                });;        
 
     }
 
@@ -79,21 +83,27 @@ export default function SimpleModal(props) {
         props.firebase.collection('posts').doc(userID)
                 .collection('userPosts').doc(postID).set({
           status: 'Processing'
-      }, { merge: true });
+      }, { merge: true }).catch(error => {
+        console.log(error);
+      });;
       }
 
     if(choice == 2) {
       props.firebase.collection('posts').doc(userID)
               .collection('userPosts').doc(postID).set({
         status: 'Assigned to Operator'
-    }, { merge: true });
+    }, { merge: true }).catch(error => {
+      console.log(error);
+    });;
     }
 
   if(choice == 3) {
     props.firebase.collection('posts').doc(userID)
             .collection('userPosts').doc(postID).set({
       status: 'Work in Progress'
-  }, { merge: true });
+  }, { merge: true }).catch(error => {
+    console.log(error);
+  });;
   }
   setReload(true);
 };
